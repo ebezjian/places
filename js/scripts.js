@@ -1,22 +1,28 @@
+// Business Logic for Destinations ----------
 function Destinations(){
-  this.location = [];
+  this.locations = [];
 }
 
-function Location(location, landmark, timeOfYear, notes) {
-  this.location = location;
+Destinations.prototype.addLocation = function(location) {
+  this.locations.push(location);
+}
+
+
+// Business Logic for Locations ---------
+function Location(landmark, timeOfYear, notes) {
   this.landmark = landmark;
   this.timeOfYear = timeOfYear;
   this.notes = notes;
 }
 
-Destinations.prototype.addLocation = function (Locations) {
+Location.prototype.userClick = function() {
+  console.log("Popular landmark: " + this.landmark)
+  console.log("Best time of year to visit: " + this.timeOfYear)
+  console.log("Here is what visitors are saying: " + this.notes)
+};
 
-}
-
-
-
-
-
+let paris = new Location("Eiffle Tower", "Fall", "This is a lovely place with great wine");
+let rome = new Location("Leaning Tower of Pisa", "Summer", "This is a charming place with great pizza");
 
 
 
@@ -25,10 +31,16 @@ Destinations.prototype.addLocation = function (Locations) {
 
 
 /*
-function AddressBook() {        ****like "Destinations"****
+// Business Logic for AddressBook ---------
+function AddressBook() {
   this.contacts = [];
 }
 
+AddressBook.prototype.addContact = function(contact) {
+  this.contacts.push(contact);
+}
+
+// Business Logic for Contacts ---------
 function Contact(firstName, lastName, phoneNumber) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -40,5 +52,10 @@ Contact.prototype.fullName = function() {
 }
 
 
-AddressBook.prototype.addContact = function(contact) {
-  this.contacts.push(contact);
+
+function A(B)
+add function B + 5
+
+
+function B()
+adds 1 + 1
