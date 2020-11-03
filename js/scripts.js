@@ -30,17 +30,17 @@ function Location(landmark, timeOfYear, notes) {
 }
 
 Location.prototype.userClick = function() {
-  location.forEach(function(element) {
-    $("#paris").append('<li>' + element + '</li>');
-  })
-}
+  //paris.forEach(function(element) {
+    $("#paris").show();
+  //})
+};
 
-let location = new Location();
+
 let paris = new Location("Eiffle Tower", "Fall", "This is a lovely place with great wine");
 let rome = new Location("Leaning Tower of Pisa", "Summer", "This is a charming place with great pizza");
 let portland = new Location("Powell's Books", "Summer", "Beautiful city in the spring and summer, outdoor activites abound.");
 
-
+$("paris").onclick
 
 
 
