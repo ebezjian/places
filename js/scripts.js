@@ -22,6 +22,7 @@ $(document).ready(function()  {
 }
 
 
+
 // Business Logic for Locations ---------
 function Location(landmark, timeOfYear, notes) {
   this.landmark = landmark;
